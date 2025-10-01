@@ -16,12 +16,12 @@ process.env.SUPABASE_SERVICE_ROLE!,
 { auth: { persistSession: false } }
 );
 
-app.get('/api/health', (_req, res) => {
+app.get('/health', (_req, res) => {
 res.json({ ok: true, time: new Date().toISOString() });
 });
 
 // Contact form submission endpoint
-app.post('/api/leads/submit', async (req, res) => {
+app.post('/leads/submit', async (req, res) => {
 try {
 const { name, email, phone, message, source } = req.body || {};
 
