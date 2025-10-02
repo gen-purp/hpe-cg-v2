@@ -37,6 +37,10 @@ return (
 <main style={{ padding: 24 }}>
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 <h1>Admin Centre</h1>
+<div style={{ display: 'flex', gap: 8 }}>
+  <button onClick={() => nav('/admin/invite')}>Invite user</button>
+  <button onClick={signOut}>Sign out</button>
+</div>
 <button onClick={signOut}>Sign out</button>
 </div>
 <h2>Leads</h2>
